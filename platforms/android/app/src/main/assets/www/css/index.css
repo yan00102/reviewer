@@ -1,0 +1,266 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+ *,
+ *:before,
+ *:after {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+ }
+ html {
+   width: 100vw;
+   font-size: 20px;
+   line-height: 1.7;
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+ }
+ body {
+   min-height: 100vh;
+   min-width: 100vw;
+ }
+ .page {
+   min-height: 100vh;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   opacity: 0;
+   transform: translateX(-200%);
+ }
+ .page.active {
+   opacity: 1;
+   transform: translateX(0);
+ }
+ /*****Header Buttons*****/
+ #home header button {
+  font-weight: 300;
+  color: #007aff;
+  font-size: 1rem;
+  grid-area: btn-right;
+}
+#details header button,
+#add header button {
+  font-weight: 300;
+  color: #007aff;
+  font-size: 1rem;
+  grid-area: btn-left;
+}
+ /*All headers*/
+ .page header {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "btn-left title btn-right";
+  height: 1.7rem;
+  background-color:hsla(20, 100%, 52%, 0.81);
+  box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.64);
+  padding-top: env(safe-area-inset-top)
+}
+.page header h1 {
+  font-weight: 300;
+  font-size: 1rem;
+  color: hsla(222, 100%, 47%, 0.81);
+  text-align: center;
+  grid-area: title;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*****HomePage*****/
+#btnAdd{
+  height: 100%;
+  background-color: hsla(20, 100%, 70%, 1);
+  padding: 0;
+  border: 0;
+}
+.review-list-img{
+  padding: 0.5rem;
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  height: 6rem;
+  width: 100%;
+  object-fit: cover
+}
+.review-list{
+  width: 100%;
+  height: 100vh;
+}
+
+/*****Details*****/
+#btnDetailsBack{
+  background-color:hsla(20, 100%, 70%, 1);
+}
+.imgDetails{
+  width: 90%;
+  margin: 1rem 1rem 1rem 1rem;
+  height: auto;
+}
+.details-img{
+  width: 100%;
+  box-shadow: 4px 4px;
+  height: 100vh;
+}
+figcaption{
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+}
+.details-item{
+  height: 30vh;
+}
+.details-item p{
+  margin: 2rem 2rem 2rem 0;
+  position: relative;
+  top: 2rem;
+  left: 2rem;
+  height: 5rem;
+}
+.details-btn{
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem 2rem 0 0;
+}
+#btnDelete{
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: none;
+}
+.details-photo{
+  width: 95%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/*****Add*****/
+.photo-form p{
+  margin: 0.5rem;
+  height: 100px;
+}
+#imgAdd{
+  margin: 1rem 1rem 1rem 1rem;
+  box-shadow: 3px 3px;
+}
+.add-photo{
+  /* height: 330px; */
+  width: auto;
+}
+.photo-form p{
+  height: 3rem;
+}
+#add img{
+  width: 100%;
+  object-fit: cover;
+  /* height: 330px; */
+}
+#btnCancel{
+  background-color: hsla(20, 100%, 70%, 1);
+  height: 34px;
+}
+.add-btn{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  margin: 1rem 0 1rem 0;
+}
+#btnSave{
+  font-size: 1rem;
+  border: solid 1px #007aff;
+  padding: 8px;
+  height: 65px;
+  border-radius: 40px;
+  margin: 1.5rem 1rem 0 0;
+  background-color:hsla(17, 100%, 56%, 0.85);
+  font-weight: 300px;
+}
+.item-name{
+  margin: 1rem 0.3rem 1rem 0.5rem;
+  width: 98%;
+  height: 150px;
+}
+.stars{
+  margin: 1rem 0.3rem 1rem 0.5rem;
+  width: 98%;
+  height: 150px;
+}
+#msg{
+  margin: 1.4rem 0rem 0 0.4rem;
+  width: 95%;
+  height: 90px;
+  font-size: 2rem;
+}
+#msg a:hover{
+  background-color:hsla(62, 100%, 50%, 1) !important; 
+}
+
+/*****STARS*****/
+.star{
+  color: hsla(43, 100%, 50%, 1);
+  font-size: 2.0rem;
+  padding: 0 0.5rem; /* space out the stars */
+}
+.star::before{
+  content: '\2606';    /* star outline */
+  cursor: pointer;
+}
+.star.rated::before{
+  /* the style for a selected star */
+  content: '\2605';  /* filled star */
+}
+
+.stars{
+    counter-reset: rateme 0;   
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+.star.rated{
+    counter-increment: rateme 1;
+}
+.stars::after{
+    content: counter(rateme) '/5';
+}
+
+/*****STARS of detail*****/
+
+.Dstar{
+  color: hsla(43, 100%, 50%, 1);
+  font-size: 2.0rem;
+  padding: 0 0.5rem; /* space out the stars */
+}
+.Dstar::before{
+  content: '\2606';    /* star outline */
+  cursor: pointer;
+}
+.Dstar.rated::before{
+  /* the style for a selected star */
+  content: '\2605';  /* filled star */
+}
+
+.Dstars{
+    counter-reset: rateme 0;   
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+.Dstar.rated{
+    counter-increment: rateme 1;
+}
+.Dstars::after{
+    content: counter(rateme) '/5';
+}

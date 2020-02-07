@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline' 'self' data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ADD Content-Security-Policy meta tag HERE -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>ReviewR Starter Code</title>
+  <link rel="stylesheet" href="./css/fontawesome/css/all.css">
+  <!-- <script src="https://kit.fontawesome.com/6527c48f2f.js" crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="./css/index.css" />
+</head>
+
+<body>
+  <!-- Page 1 - HomePage -->
+  <section class="page active" id="home">
+    <header>
+      <h1>Reviewer App</h1>
+      <button id="btnAdd" data-target="add"><i class="fa fa-plus-circle"></i></button>
+    </header>
+    <main>
+      <ul class="review-list">
+        <!-- list of saved reviews gets added here -->
+        <!-- <div class="review-img"> -->
+        <!-- <img class="review-list-img" src="" alt="" />
+        <figcaption class="review-list-fig"></figcaption> -->
+      <!-- </div> -->
+      </ul>
+    </main>
+  </section>
+  <!-- Page 2 - Details -->
+  <section class="page" id="details">
+    <header>
+      <button id="btnDetailsBack" data-target="home">&lt; Back</button>
+      <h1>Details</h1>
+    </header>
+    <main class="details-img">
+      <figure class="imgDetails">
+        <img class="details-photo" src="" alt="pic1" />
+        <figcaption class="details-title">02-01-2020</figcaption>
+      </figure>
+      <div class="details-item">
+        <div>
+            <div id="detailStars"></div>
+        </div>
+      
+      </div>
+      <div class="details-btn">
+        <button id="btnDelete" data-target="home"><i class="fa fa-times-circle fa-3x"></i></button>
+      </div>
+    </main>
+  </section>
+  <!-- Page 3 - Add  -->
+  <section class="page" id="add">
+    <header>
+      <button id="btnCancel" data-target="home">Cancel</button>
+      <h1>Add New Review</h1>
+    </header>
+    <main>
+      <div class="photo-form">
+        <figure id="imgAdd">
+          <img class="add-photo" src="" alt="pic1" />
+        </figure>
+        <div class="item-name">
+          <label for="msg"><input type="text" id="msg" placeholder="Item Name" /></label>
+        </div>
+        <div class="stars" data-rating="1"> 
+          <span class="star">&nbsp;</span>
+          <span class="star">&nbsp;</span>
+          <span class="star">&nbsp;</span>
+          <span class="star">&nbsp;</span>
+          <span class="star">&nbsp;</span>
+        </div>
+        <div class="add-btn">
+          <button id="btnSave" data-target="home">SAVE</button>
+        </div>
+      </div>
+    </main>
+  </section>
+  <script src="cordova.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

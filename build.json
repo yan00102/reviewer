@@ -1,0 +1,12 @@
+{
+  "ios": {
+      "debug": {
+          "developmentTeam": "V94L67MHG8",
+          "packageType": "development",
+          "automaticProvisioning": true,
+          "buildFlag": [
+              "-UseModernBuildSystem=0"
+          ]
+      }
+  }
+}

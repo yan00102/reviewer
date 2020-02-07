@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ApplicationProperties</key>
+	<dict>
+		<key>ApplicationPath</key>
+		<string>Applications/ReviewStaRz.app</string>
+		<key>CFBundleIdentifier</key>
+		<string>io.cordova.hellocordova</string>
+		<key>CFBundleShortVersionString</key>
+		<string>1.0.0</string>
+		<key>CFBundleVersion</key>
+		<string>1.0.0</string>
+		<key>SigningIdentity</key>
+		<string>iPhone Developer: Xiang Yan (DSZT5DCB7K)</string>
+		<key>Team</key>
+		<string>V94L67MHG8</string>
+	</dict>
+	<key>ArchiveVersion</key>
+	<integer>2</integer>
+	<key>CreationDate</key>
+	<date>2020-02-07T03:38:19Z</date>
+	<key>Name</key>
+	<string>ReviewStaRz</string>
+	<key>SchemeName</key>
+	<string>ReviewStaRz</string>
+</dict>
+</plist>
